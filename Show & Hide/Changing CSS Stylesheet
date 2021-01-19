@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            #myDIV {
+                width: 100%;
+                padding: 50px 0;
+                text-align: center;
+                color: blue;
+                margin-top: 20px;
+                display: none;
+            }
+
+            #myDIV2 {
+                width: 100%;
+                padding: 50px 0;
+                text-align: center;
+                color: blue;
+                margin-top: 20px;
+            }
+           
+        </style>
+    </head>
+    <body>
+
+        <button id="button">Try it</button>
+
+        <div id="myDIV" style="background-color:lightblue;">
+            This is my DIV element.
+        </div>
+
+        <div id="myDIV2" style="background-color:lightblue;">
+            This is my DIV element.
+        </div>
+
+
+        <script type="text/javascript">
+
+           
+        document.getElementById("button").onclick = function() {
+
+            var element = document.getElementById('myDIV');
+                style = window.getComputedStyle(element);
+                display = style.getPropertyValue('display');
+                alert(display);
+
+         
+
+
+        }
+
+
+            
+        </script>
+
+    </body>
+</html>
