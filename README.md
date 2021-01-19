@@ -1,2 +1,2 @@
 # library
-This is a test
+This is library where I save all the code snippets I learn for future use. 
