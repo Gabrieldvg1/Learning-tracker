@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+        
+        
+    
+        <style type="text/css">
+        
+        
+            #heart { 
+                
+                position: relative; 
+                width: 100px; 
+                height: 90px; 
+                float: left;
+            } 
+
+            #heart:before, #heart:after { 
+                
+                position: absolute; 
+                content: ""; 
+                left: 50px; 
+                top: 0; 
+                width: 50px; 
+                height: 80px; 
+                background: red; 
+                border-radius: 50px 50px 0 0; 
+                transform: rotate(-45deg); 
+                transform-origin: 0 100%; 
+            } 
+
+            #heart:after { 
+                
+                left: 0; 
+                transform: rotate(45deg); 
+                transform-origin :100% 100%; 
+               
+            }
+            
+            #droppable {
+                
+                width: 200px;
+                height: 200px;
+                background-color: grey;
+                margin: 0 auto;
+                padding: 0;
+                
+                
+            }
+        
+            #header {
+                
+                
+                width:330px;
+                margin: 0 auto;
+                padding: 0;
+                
+                
+            }
+            
+            #message {
+                
+                
+                width:200px;
+                height:50px;
+                position: relative;
+                top: 250px;
+                text-align: center;
+                text-justify: inter-word;
+                
+              
+            }
+            
+       
+        
+        
+        
+        </style>
+    
+    </head>
+    
+    
+    
+    
+    
+    <body>
+    
+        <div id="header"><h1>Put the heart in the box</h1></div>
+    
+        <div id="heart"></div>
+        
+        <div id="droppable"><div>
+            
+        <div id="message"></div>
+        
+        
+        <script type="text/javascript">
+        
+        
+            $("#heart").draggable();
+            
+            
+            $( "#droppable" ).droppable({
+                drop: function( event, ui ) {
+        
+                    $("#droppable").css("backgroundColor","white");
+                    $("#message").html("<h1>Baby have a Merry Christmas &#x1F618;</h1>");
+                    
+                },
+                
+                 out: function( event, ui ) {
+                
+                
+                    $("#droppable").css("backgroundColor","grey");
+                    $("#message").html("<h1>Keep the heart in the box &#x1F61F;</h1>")
+                
+                
+            }
+            });
+            
+            
+            
+            
+            
+            
+              
+            
+            
+            
+            
+            
+            
+            
+        
+        
+        </script>
+    
+    
+    
+    </body>
+
+    
+        
+
+
+
+
+</html>
