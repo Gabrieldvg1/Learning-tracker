@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+
+    <title>Hello, world!</title>
+
+    <style type="text/css">
+      /*  html {
+        background: url(background1.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+    */
+
+      body {
+        background: none;
+      }
+
+      #showLogInForm {
+        font-weight: bold;
+        color: blue;
+        text-decoration: underline;
+      }
+
+      .form-control {
+        margin-bottom: 10px;
+      }
+
+      #signUpForm #logInForm {
+        width: 200px;
+      }
+
+      #toggleForms {
+        color: blue;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-8 text-center">
+          <h1>Secret Diary</h1>
+
+          <div id="signUpForm" class="justify-content-center">
+            <form class="row mb-3" method="post">
+              <div>
+                <input
+                  class="form-control"
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                />
+              </div>
+
+              <div>
+                <input
+                  class="form-control"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                />
+              </div>
+
+              <div class="text-center">
+                <label>
+                  <input type="checkbox" name="stayLoggedIn" value="1" />
+                  Stay Logged In
+                </label>
+              </div>
+
+              <input type="hidden" name="signUp" value="1" />
+
+              <div class="text-center">
+                <input
+                  class="btn btn-primary"
+                  type="submit"
+                  name="submit"
+                  value="Sign up"
+                />
+              </div>
+            </form>
+          </div>
+          <div
+            id="logInForm"
+            class="justify-content-center"
+            style="display: none"
+          >
+            <form class="row mb-3" method="post">
+              <div>
+                <input
+                  class="form-control"
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                />
+              </div>
+
+              <div>
+                <input
+                  class="form-control"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                />
+              </div>
+
+              <div class="text-center">
+                <label>
+                  <input type="checkbox" name="stayLoggedIn" value="1" />
+                  Stay Logged In
+                </label>
+                <input type="hidden" name="signUp" value="0" />
+              </div>
+
+              <div class="text-center">
+                <input
+                  class="btn btn-primary"
+                  type="submit"
+                  name="submit"
+                  value="Log in"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <p><a href="#" id="toggleForms">Log in</a></p>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript">
+      document.getElementById("toggleForms").onclick = function () {
+        var x = document.getElementById("logInForm");
+        var y = document.getElementById("signUpForm");
+
+        if (x.style.display == "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+
+        if (y.style.display == "none") {
+          y.style.display = "block";
+        } else {
+          y.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
