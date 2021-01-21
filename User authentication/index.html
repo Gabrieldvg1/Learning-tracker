@@ -155,15 +155,18 @@
       document.getElementById("toggleForms").onclick = function () {
         var x = document.getElementById("logInForm");
         var y = document.getElementById("signUpForm");
+        var z = document.getElementById("toggleForms");
 
         if (x.style.display == "none") {
           x.style.display = "block";
+          z.innerHTML = "Sign Up";
         } else {
           x.style.display = "none";
         }
 
         if (y.style.display == "none") {
           y.style.display = "block";
+          z.innerHTML = "Log in";
         } else {
           y.style.display = "none";
         }
